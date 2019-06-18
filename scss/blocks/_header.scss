@@ -1,0 +1,42 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 10;
+
+    &__logo {
+        display: block;
+        width: 400px;  
+        margin: 10px 0 0 10px;
+        
+        &--abbr {
+            width: 80px;  
+            display: none;
+            
+            @include small {
+                display: block;
+            }    
+        }
+        
+        &--full {
+            display: block;
+            
+            @include small {
+                display: none;
+            }
+        }
+    }
+    
+    &__menu {
+        line-height: 1;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-family: "Founders", sans-serif;
+        border-radius: 15px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        padding: 6px 25px 7px 25px;
+        cursor: pointer;
+    }
+}

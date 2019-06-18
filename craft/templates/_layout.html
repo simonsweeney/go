@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="{{ seoKeywords.copy }}"/>
+
+
+	<!-- DEM SOCIAL -->
+
+	{% set heading = entry.title %}
+	{% if heading %}
+
+	    <title>{{ heading }} — {{ seoTitle.copy }}</title>
+		<meta property="og:title" content="{{ heading }} — {{ seoTitle.copy }}"/>
+
+
+	{% else %}
+
+    	<title>{% if title is defined %}{{ title }}{% else %}{{ seoTitle.copy }}{% endif %}</title>
+    	<meta property="og:title" content="{% if title is defined %}{{ title }}{% else %}{{ seoTitle.copy }}{% endif %}"/>
+
+	{% endif %}
+
+
+	
+
+	{% set copy = entry.rows.type('copy').first %}
+	{% if copy %}
+	
+	    <meta name="description" content="{{ copy.copy|striptags }}"/>
+	    <meta property="og:description" content="{{ copy.copy|striptags }}"/>
+
+	{% else %}
+
+	    <meta name="description" content="{% if description is defined %}{{ description }}{% else %}{{ seoDescription.copy }}{% endif %}"/>
+	    <meta property="og:description" content="{% if description is defined %}{{ description }}{% else %}{{ seoDescription.copy }}{% endif %}"/>
+
+	{% endif %}
+
+		<meta property="og:image" content="{{ siteUrl}}{% if thumb is defined %}{{ thumb }}{% else %}{% for asset in image.image %}{{ asset.url('medium') }}{% endfor %}{% endif %} " />
+		<meta name="twitter:image" content="{{ siteUrl}}{% if thumb is defined %}{{ thumb }}{% else %}{% for asset in image.image %}{{ asset.url('medium') }}{% endfor %}{% endif %}" />
+
+
+	<link rel="home" href="{{ siteUrl }}" />
+
+	<link href="https://fonts.googleapis.com/css?family=Spectral:400,400i" rel="stylesheet">
+	<link rel="stylesheet" href="/main.css">
+	
+
+
+</head>
+
+{% if craft.request.segment(1) == 'editors-picks' %}
+{% set color = 2 %}
+{% elseif craft.request.segment(1) == 'adventure' %}
+{% set color = 3 %}
+{% elseif craft.request.segment(1) == 'travel' %}
+{% set color = 4 %}
+{% elseif craft.request.segment(1) == 'fitness' %}
+{% set color = 5 %}
+{% elseif craft.request.segment(1) == 'culture' %}
+{% set color = 6 %}
+{% else %}
+{% set color = 1 %}
+{% endif %}
+
+<body class="colors--{{ color }}">
+	
+		{% include "partials/header" %}
+		{% include "partials/menu" %}
+
+		<main id="content" role="main">
+			{% block content %}
+			
+			{% endblock %}
+		</main>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  
+<script>
+	$('.header__menu').click(function(){
+		$('.menu').addClass('on');
+	});
+	
+	$('.menu__close').click(function(){
+		$('.menu').removeClass('on');
+	});
+</script>
+  
+  
+</body>
+</html>

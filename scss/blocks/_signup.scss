@@ -1,0 +1,79 @@
+.signup {
+    font-family: "Founders", sans-serif;
+    font-size: 30px;
+    padding: 15px;
+    display: flex;
+
+    @include small {
+        display: block;
+    }
+    
+    &__left,
+    &__right {
+        width: 50%;
+        padding-right: 15px;
+        
+        @include small {
+            width: 100%;
+        }
+    }
+    
+    &__right {
+        @include small {
+            margin-top: 2em;
+        }
+    }
+    
+    &__heading,
+    &__social {
+        font-size: 30px;
+        
+        @include small {
+            font-size: 25px;
+        }
+    }
+    
+    &__social,
+    &__newsletter {
+        margin-top: 6em;  
+        
+        @include small {
+            margin-top: 1em;
+        }
+    }
+    
+    input {
+        font-size: 30px;
+        background: none;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+        
+        @include small {
+            font-size: 25px;
+        }
+    }
+    
+    input.signup__email {
+        width: 85%;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        padding-bottom: 10px;
+        font-family: "Founders", sans-serif;
+        
+        @include small {
+            width: 100%;
+        }
+    }
+    
+    &__submit {
+        margin-top: 15px;
+        border-radius: 30px;
+        width: 50%;
+        text-align: left;
+        padding: 5px 10px 8px 20px;
+        cursor: pointer;
+    }
+}

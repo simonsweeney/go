@@ -1,0 +1,21 @@
+{% set img = entry.thumbnail.first() %}
+
+{% set cat = entry.categoryNew.first() %}
+{% set slug = cat|lower %}
+
+{% if cat == 'Editor’s Picks' %}
+	{% set slug = 'editors-picks' %}
+{% endif %}
+
+
+<div class="post post--{{ random(['small', 'medium', 'large']) }}">
+        <a href="{{ entry.url }}">
+            <div class="post__image" style="background-image: url('{{ img.url }}')"></div>
+        </a>
+        <a href="/{{ slug }}" class="post__category">
+    	    {{ cat }}
+    	</a>
+    	<div class="post__text">
+        	<h3 class="post__title">{{ entry.title }}</h3>
+    	</div>
+</div>

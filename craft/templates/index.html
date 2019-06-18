@@ -1,0 +1,38 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+
+
+<div class="grid">
+    <h2 class="grid__title">Latest Articles</h2>
+
+	{% for entry in craft.entries.section('posts').limit(4).find() %}
+
+        {% include 'partials/post' %}
+
+	{% endfor %}
+
+</div>
+
+
+{% include 'partials/signup' %}
+
+
+
+{% include 'partials/grid' with { title: 'Editor’s Picks', slug: 'editors-picks'} %}
+{% include 'partials/grid' with { title: 'Adventure', slug: 'adventure'} %}
+{% include 'partials/grid' with { title: 'Travel', slug: 'travel'} %}
+{% include 'partials/grid' with { title: 'Fitness', slug: 'fitness'} %}
+{% include 'partials/grid' with { title: 'Culture', slug: 'culture'} %}
+
+
+
+{% include 'partials/signup' %}
+
+
+
+
+	
+
+{% endblock %}

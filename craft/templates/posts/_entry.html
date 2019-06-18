@@ -1,0 +1,97 @@
+{% extends "_layout" %}
+{% set seoTitle = entry.title %}
+
+{% for asset in entry.thumbnail %}
+	{% set thumb = asset.url %}
+	{% set seoImage = thumb %}
+{% endfor %}
+
+
+{% block content %}
+
+    
+
+
+	{% set cat = entry.categoryNew.first() %}
+
+	{% if cat == 'Editor’s Picks' %}
+		{% set slug = 'editors-picks' %}
+	{% endif %}
+
+	<article class="article">
+	
+		<div class="article__title">
+			<h1>{{ entry.title }}</h1>
+		</div>
+
+		
+		<div class="article__details">
+			<div>{% if entry.authorName %}By{% endif %} {% if entry.authorLink %}<a href="{{ entry.authorLink }}">{% endif %}{{ entry.authorName }}{% if entry.authorLink %}</a>{% endif %}<br>
+			on {{ entry.postDate | date("M d, Y") }}<br><br>
+			Share<br>
+			on <a href="https://www.facebook.com/sharer/sharer.php?u={{ entry.url }}" target="_blank">Facebook</a><br>
+			on <a href="http://twitter.com/share?text={{ entry.title }}—&url={{ entry.url }}" target="_blank">Twitter</a></div>
+		</div>
+
+		{% for row in entry.rows %}
+			
+			{% if row.type == 'image' %}
+
+				<div class="article__image">
+					<img src="{% for asset in row.file %}{{ asset.url }}{% endfor %}" alt="">
+				</div>
+
+				{% if row.credit %}
+				<div class="article__credit">
+					<div>Photo credit:<br>{{ row.credit }}</div>
+				</div>
+				{% endif %}
+
+			{% else %}
+		
+				<div class="article__text">
+						{{ row.copy }}
+					</div>
+				</div>
+
+			{% endif %}
+
+		{% endfor %}
+
+
+
+		<div class="article__details">
+			<div>By {% if entry.authorLink %}<a href="{{ entry.authorLink }}">{% endif %}{{ entry.authorName }}{% if entry.authorLink %}</a>{% endif %}<br>
+			on {{ entry.postDate | date("M d, Y") }}<br><br>
+			Share<br>
+			on <a href="https://www.facebook.com/sharer/sharer.php?u={{ entry.url }}" target="_blank">Facebook</a><br>
+			on <a href="http://twitter.com/share?text={{ entry.title }}—&url={{ entry.url }}" target="_blank">Twitter</a></div>
+		</div>
+		
+	</article>
+
+
+	{% set currentId = entry.id %}
+	
+	
+	<div class="grid grid--shadow">
+	    <h2 class="grid__title">More {{ cat }}</h2>
+	
+	    {% set entries = craft.entries.section('posts').relatedTo(craft.categories.slug(slug)).limit(2) %}
+	
+		{% for entry in entries %}
+			
+	        {% include 'partials/post' %}
+	
+		{% endfor %}
+		<div class="grid__all">
+		    <a href="/{{ slug }}" class="grid__button">SEE ALL {{ cat }}</a>
+		</div>
+	</div>
+	
+	
+{% include 'partials/signup' %}
+
+
+
+{% endblock %}

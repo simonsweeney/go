@@ -1,0 +1,793 @@
+// color 1
+$cream: rgb(255, 238, 179);
+$purple: rgb(72, 23, 79);
+$purple_shadow: rgba(72, 23, 79, 0.5);
+
+// color 2
+$grey: rgb(227, 224, 219);
+$red: rgb(243, 51, 62);
+$red_shadow: rgba(243, 51, 62, 0.5);
+
+// color 3
+$orange: rgb(247, 200, 122);
+$green: rgb(25, 157, 118);
+$green_shadow: rgba(25, 157, 118, 0.5);
+
+// color 4
+$yellow: rgb(255, 209, 1);
+$navy: rgb(60, 80, 195);
+$navy_shadow: rgba(60, 80, 195, 0.5);
+
+
+// color 5
+$peach: rgb(255, 163, 119);
+$violet: rgb(72, 23, 207);
+$violet_shadow: rgba(72, 23, 207, 0.5);
+
+// color 6
+$mustard: rgb(255, 209, 1);
+$blue: rgb(60, 80, 195);
+$blue_shadow: rgba(60, 80, 195, 0.5);
+
+
+//for loop this so you can add hover
+
+.colors {
+
+
+    // START  ////////////////////
+    &--1 {
+        background-color: $cream;
+        color: $purple;
+        
+        .logo .st0 {
+            fill: $purple;    
+        }
+        
+        .menu {
+            background-color: $purple;
+            
+            &__item {
+                color: $cream;
+                border-bottom: 3px solid $purple;
+                
+                &:hover {
+                    border-bottom: 3px solid $cream;
+                }
+            }
+        }
+        
+        .article__text a {
+            border-bottom: 1px solid $purple;
+            
+            &:hover {
+                border-bottom: 0px solid $purple;
+            }
+        }
+        
+        .post {
+            &__image {
+                transition: box-shadow 0.2s;
+                -webkit-box-shadow: 0px 3px 30px 0px $purple_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $purple_shadow;
+                box-shadow: 0px 3px 30px 0px $purple_shadow;
+            }
+            
+            // &:hover {
+            //     .post__image {
+            //         -webkit-box-shadow: 0px 3px 50px 0px $red_shadow;
+            //         -moz-box-shadow: 0px 3px 50px 0px $red_shadow;
+            //         box-shadow: 0px 3px 50px 0px $red_shadow;
+            //     }
+            // }
+            &__category {
+                border-color: $purple;
+                
+                &:hover {
+                    background-color: $purple;
+                    color: $cream;
+                }
+            }
+        }
+   
+        .header {
+            background-color: $cream;
+            color: $purple;
+            -webkit-box-shadow: 0px 3px 30px 0px $purple_shadow;
+            -moz-box-shadow: 0px 3px 30px 0px $purple_shadow;
+            box-shadow: 0px 3px 30px 0px $purple_shadow;
+            
+            &__menu {
+                background-color: $purple;
+                border: 2px solid $purple;
+                color: $cream;
+                
+                &:hover {
+                    background-color: $cream;
+                    color: $purple;
+                }
+            }
+        }
+        .signup {
+            background-color: $purple;
+            color: $cream;
+            
+            &__email {
+                border-bottom-color: $cream;
+                
+                &::placeholder {
+                    color: $cream;
+                }
+            }
+            
+            &__submit {
+                color: $purple;
+                background-color: $cream;
+                border: 2px solid $cream;
+                
+                &:hover {
+                    background: none;
+                    color: $cream;
+                }
+            }
+            
+            &__social a:hover {
+                border-bottom: 2px solid $cream;
+            }
+        }
+        .grid {
+            background-color: $cream;
+            &--shadow {
+                -webkit-box-shadow: 0px 3px 30px 0px $purple_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $purple_shadow;
+                box-shadow: 0px 3px 30px 0px $purple_shadow;
+            }
+            &__button {
+                background-color: $purple;
+                color: $cream;
+                border-color: $purple;
+                
+                &:hover {
+                    background-color: $cream;
+                    color: $purple;
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    // START  ////////////////////
+    &--2 {
+        background-color: $grey;
+        color: $red;
+        
+        .logo .st0 {
+            fill: $red;    
+        }
+        
+        .menu {
+            background-color: $red;
+            
+            &__item {
+                color: $grey;
+                border-bottom: 3px solid $red;
+                
+                &:hover {
+                    border-bottom: 3px solid $grey;
+                }
+            }
+        }
+        
+        .article__text a {
+            border-bottom: 1px solid $red;
+            
+            &:hover {
+                border-bottom: 0px solid $red;
+            }
+        }
+        
+        .post {
+            &__image {
+                transition: box-shadow 0.2s;
+                -webkit-box-shadow: 0px 3px 30px 0px $red_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $red_shadow;
+                box-shadow: 0px 3px 30px 0px $red_shadow;
+            }
+            
+            // &:hover {
+            //     .post__image {
+            //         -webkit-box-shadow: 0px 3px 50px 0px $red_shadow;
+            //         -moz-box-shadow: 0px 3px 50px 0px $red_shadow;
+            //         box-shadow: 0px 3px 50px 0px $red_shadow;
+            //     }
+            // }
+            &__category {
+                border-color: $red;
+                
+                &:hover {
+                    background-color: $red;
+                    color: $grey;
+                }
+            }
+        }
+   
+        .header {
+            background-color: $grey;
+            color: $red;
+            -webkit-box-shadow: 0px 3px 30px 0px $red_shadow;
+            -moz-box-shadow: 0px 3px 30px 0px $red_shadow;
+            box-shadow: 0px 3px 30px 0px $red_shadow;
+            
+            &__menu {
+                background-color: $red;
+                border: 2px solid $red;
+                color: $grey;
+                
+                &:hover {
+                    background-color: $grey;
+                    color: $red;
+                }
+            }
+        }
+        .signup {
+            background-color: $red;
+            color: $grey;
+            
+            &__email {
+                border-bottom-color: $grey;
+                
+                &::placeholder {
+                    color: $grey;
+                }
+            }
+            
+            &__submit {
+                color: $red;
+                background-color: $grey;
+                border: 2px solid $grey;
+                
+                &:hover {
+                    background: none;
+                    color: $grey;
+                }
+            }
+            
+            &__social a:hover {
+                border-bottom: 2px solid $grey;
+            }
+        }
+        .grid {
+            background-color: $grey;
+            &--shadow {
+                -webkit-box-shadow: 0px 3px 30px 0px $red_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $red_shadow;
+                box-shadow: 0px 3px 30px 0px $red_shadow;
+            }
+            &__button {
+                background-color: $red;
+                color: $grey;
+                border-color: $red;
+                
+                &:hover {
+                    background-color: $grey;
+                    color: $red;
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    // START  ////////////////////
+    &--3 {
+        background-color: $orange;
+        color: $green;
+        
+        .logo .st0 {
+            fill: $green;    
+        }
+        
+        .menu {
+            background-color: $green;
+            
+            &__item {
+                color: $orange;
+                border-bottom: 3px solid $green;
+                
+                &:hover {
+                    border-bottom: 3px solid $orange;
+                }
+            }
+        }
+        
+        .article__text a {
+            border-bottom: 1px solid $green;
+            
+            &:hover {
+                border-bottom: 0px solid $green;
+            }
+        }
+        
+        .post {
+            &__image {
+                transition: box-shadow 0.2s;
+                -webkit-box-shadow: 0px 3px 30px 0px $green_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $green_shadow;
+                box-shadow: 0px 3px 30px 0px $green_shadow;
+            }
+            
+            // &:hover {
+            //     .post__image {
+            //         -webkit-box-shadow: 0px 3px 50px 0px $green_shadow;
+            //         -moz-box-shadow: 0px 3px 50px 0px $green_shadow;
+            //         box-shadow: 0px 3px 50px 0px $green_shadow;
+            //     }
+            // }
+            &__category {
+                border-color: $green;
+                
+                &:hover {
+                    background-color: $green;
+                    color: $orange;
+                }
+            }
+        }
+   
+        .header {
+            background-color: $orange;
+            color: $green;
+            -webkit-box-shadow: 0px 3px 30px 0px $green_shadow;
+            -moz-box-shadow: 0px 3px 30px 0px $green_shadow;
+            box-shadow: 0px 3px 30px 0px $green_shadow;
+            
+            &__menu {
+                background-color: $green;
+                border: 2px solid $green;
+                color: $orange;
+                
+                &:hover {
+                    background-color: $orange;
+                    color: $green;
+                }
+            }
+        }
+        .signup {
+            background-color: $green;
+            color: $orange;
+            
+            &__email {
+                border-bottom-color: $orange;
+                
+                &::placeholder {
+                    color: $orange;
+                }
+            }
+            
+            &__submit {
+                color: $green;
+                background-color: $orange;
+                border: 2px solid $orange;
+                
+                &:hover {
+                    background: none;
+                    color: $orange;
+                }
+            }
+            
+            &__social a:hover {
+                border-bottom: 2px solid $orange;
+            }
+        }
+        .grid {
+            background-color: $orange;
+            &--shadow {
+                -webkit-box-shadow: 0px 3px 30px 0px $green_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $green_shadow;
+                box-shadow: 0px 3px 30px 0px $green_shadow;
+            }
+            &__button {
+                background-color: $green;
+                color: $orange;
+                border-color: $green;
+                
+                &:hover {
+                    background-color: $orange;
+                    color: $green;
+                }
+            }
+        }
+    }
+    
+    
+
+    
+    
+    
+    // START  ////////////////////
+    &--4 {
+        background-color: $yellow;
+        color: $navy;
+        
+        .logo .st0 {
+            fill: $navy;    
+        }
+        
+        .menu {
+            background-color: $navy;
+            
+            &__item {
+                color: $yellow;
+                border-bottom: 3px solid $navy;
+                
+                &:hover {
+                    border-bottom: 3px solid $yellow;
+                }
+            }
+        }
+        
+        .article__text a {
+            border-bottom: 1px solid $navy;
+            
+            &:hover {
+                border-bottom: 0px solid $navy;
+            }
+        }
+        
+        .post {
+            &__image {
+                transition: box-shadow 0.2s;
+                -webkit-box-shadow: 0px 3px 30px 0px $navy_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $navy_shadow;
+                box-shadow: 0px 3px 30px 0px $navy_shadow;
+            }
+            
+            // &:hover {
+            //     .post__image {
+            //         -webkit-box-shadow: 0px 3px 50px 0px $navy_shadow;
+            //         -moz-box-shadow: 0px 3px 50px 0px $navy_shadow;
+            //         box-shadow: 0px 3px 50px 0px $navy_shadow;
+            //     }
+            // }
+            &__category {
+                border-color: $navy;
+                
+                &:hover {
+                    background-color: $navy;
+                    color: $yellow;
+                }
+            }
+        }
+   
+        .header {
+            background-color: $yellow;
+            color: $navy;
+            -webkit-box-shadow: 0px 3px 30px 0px $navy_shadow;
+            -moz-box-shadow: 0px 3px 30px 0px $navy_shadow;
+            box-shadow: 0px 3px 30px 0px $navy_shadow;
+            
+            &__menu {
+                background-color: $navy;
+                border: 2px solid $navy;
+                color: $yellow;
+                
+                &:hover {
+                    background-color: $yellow;
+                    color: $navy;
+                }
+            }
+        }
+        .signup {
+            background-color: $navy;
+            color: $yellow;
+            
+            &__email {
+                border-bottom-color: $yellow;
+                
+                &::placeholder {
+                    color: $yellow;
+                }
+            }
+            
+            &__submit {
+                color: $navy;
+                background-color: $yellow;
+                border: 2px solid $yellow;
+                
+                &:hover {
+                    background: none;
+                    color: $yellow;
+                }
+            }
+            
+            &__social a:hover {
+                border-bottom: 2px solid $yellow;
+            }
+        }
+        .grid {
+            background-color: $yellow;
+            &--shadow {
+                -webkit-box-shadow: 0px 3px 30px 0px $navy_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $navy_shadow;
+                box-shadow: 0px 3px 30px 0px $navy_shadow;
+            }
+            &__button {
+                background-color: $navy;
+                color: $yellow;
+                border-color: $navy;
+                
+                &:hover {
+                    background-color: $yellow;
+                    color: $navy;
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    // START  ////////////////////
+    &--5 {
+        background-color: $peach;
+        color: $violet;
+        
+        .logo .st0 {
+            fill: $violet;    
+        }
+        
+        .menu {
+            background-color: $violet;
+            
+            &__item {
+                color: $peach;
+                border-bottom: 3px solid $violet;
+                
+                &:hover {
+                    border-bottom: 3px solid $peach;
+                }
+            }
+        }
+        
+        .article__text a {
+            border-bottom: 1px solid $violet;
+            
+            &:hover {
+                border-bottom: 0px solid $violet;
+            }
+        }
+        
+        .post {
+            &__image {
+                transition: box-shadow 0.2s;
+                -webkit-box-shadow: 0px 3px 30px 0px $violet_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $violet_shadow;
+                box-shadow: 0px 3px 30px 0px $violet_shadow;
+            }
+            
+            // &:hover {
+            //     .post__image {
+            //         -webkit-box-shadow: 0px 3px 50px 0px $violet_shadow;
+            //         -moz-box-shadow: 0px 3px 50px 0px $violet_shadow;
+            //         box-shadow: 0px 3px 50px 0px $violet_shadow;
+            //     }
+            // }
+            &__category {
+                border-color: $violet;
+                
+                &:hover {
+                    background-color: $violet;
+                    color: $peach;
+                }
+            }
+        }
+   
+        .header {
+            background-color: $peach;
+            color: $violet;
+            -webkit-box-shadow: 0px 3px 30px 0px $violet_shadow;
+            -moz-box-shadow: 0px 3px 30px 0px $violet_shadow;
+            box-shadow: 0px 3px 30px 0px $violet_shadow;
+            
+            &__menu {
+                background-color: $violet;
+                border: 2px solid $violet;
+                color: $peach;
+                
+                &:hover {
+                    background-color: $peach;
+                    color: $violet;
+                }
+            }
+        }
+        .signup {
+            background-color: $violet;
+            color: $peach;
+            
+            &__email {
+                border-bottom-color: $peach;
+                
+                &::placeholder {
+                    color: $peach;
+                }
+            }
+            
+            &__submit {
+                color: $violet;
+                background-color: $peach;
+                border: 2px solid $peach;
+                
+                &:hover {
+                    background: none;
+                    color: $peach;
+                }
+            }
+            
+            &__social a:hover {
+                border-bottom: 2px solid $peach;
+            }
+        }
+        .grid {
+            background-color: $peach;
+            &--shadow {
+                -webkit-box-shadow: 0px 3px 30px 0px $violet_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $violet_shadow;
+                box-shadow: 0px 3px 30px 0px $violet_shadow;
+            }
+            &__button {
+                background-color: $violet;
+                color: $peach;
+                border-color: $violet;
+                
+                &:hover {
+                    background-color: $peach;
+                    color: $violet;
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+
+    
+    
+    
+    // START  ////////////////////
+    &--6 {
+        background-color: $mustard;
+        color: $blue;
+        
+        .logo .st0 {
+            fill: $blue;    
+        }
+        
+        .menu {
+            background-color: $blue;
+            
+            &__item {
+                color: $mustard;
+                border-bottom: 3px solid $blue;
+                
+                &:hover {
+                    border-bottom: 3px solid $mustard;
+                }
+            }
+        }
+        
+        .article__text a {
+            border-bottom: 1px solid $blue;
+            
+            &:hover {
+                border-bottom: 0px solid $blue;
+            }
+        }
+        
+        .post {
+            &__image {
+                transition: box-shadow 0.2s;
+                -webkit-box-shadow: 0px 3px 30px 0px $blue_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $blue_shadow;
+                box-shadow: 0px 3px 30px 0px $blue_shadow;
+            }
+            
+            // &:hover {
+            //     .post__image {
+            //         -webkit-box-shadow: 0px 3px 50px 0px $blue_shadow;
+            //         -moz-box-shadow: 0px 3px 50px 0px $blue_shadow;
+            //         box-shadow: 0px 3px 50px 0px $blue_shadow;
+            //     }
+            // }
+            &__category {
+                border-color: $blue;
+                
+                &:hover {
+                    background-color: $blue;
+                    color: $mustard;
+                }
+            }
+        }
+   
+        .header {
+            background-color: $mustard;
+            color: $blue;
+            -webkit-box-shadow: 0px 3px 30px 0px $blue_shadow;
+            -moz-box-shadow: 0px 3px 30px 0px $blue_shadow;
+            box-shadow: 0px 3px 30px 0px $blue_shadow;
+            
+            &__menu {
+                background-color: $blue;
+                border: 2px solid $blue;
+                color: $mustard;
+                
+                &:hover {
+                    background-color: $mustard;
+                    color: $blue;
+                }
+            }
+        }
+        .signup {
+            background-color: $blue;
+            color: $mustard;
+            
+            &__email {
+                border-bottom-color: $mustard;
+                
+                &::placeholder {
+                    color: $mustard;
+                }
+            }
+            
+            &__submit {
+                color: $blue;
+                background-color: $mustard;
+                border: 2px solid $mustard;
+                
+                &:hover {
+                    background: none;
+                    color: $mustard;
+                }
+            }
+            
+            &__social a:hover {
+                border-bottom: 2px solid $mustard;
+            }
+        }
+        .grid {
+            background-color: $mustard;
+            &--shadow {
+                -webkit-box-shadow: 0px 3px 30px 0px $blue_shadow;
+                -moz-box-shadow: 0px 3px 30px 0px $blue_shadow;
+                box-shadow: 0px 3px 30px 0px $blue_shadow;
+            }
+            &__button {
+                background-color: $blue;
+                color: $mustard;
+                border-color: $blue;
+                
+                &:hover {
+                    background-color: $mustard;
+                    color: $blue;
+                }
+            }
+        }
+    }
+    
+    
+    
+     
+    
+}
+
+
+
+
+
+
+
+

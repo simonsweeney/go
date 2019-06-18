@@ -1,0 +1,75 @@
+.post {
+    float: left;
+    margin-right: 30px;
+    display: block;
+    margin-bottom: 50px;
+    position: relative;
+    min-height: 38vw;
+    
+    &--small { 
+        width: calc(40% - 30px); 
+    }
+    
+    &--medium { 
+        width: calc(45% - 30px); 
+    }
+    
+    &--large { 
+        width: calc(50% - 30px); 
+    }
+    
+    &--small,
+    &--medium,
+    &--large {
+        @include small {
+            width: 100%;
+        }
+    }
+    
+    &__title {
+        font-family: "Founders", sans-serif;
+        font-size: 30px;
+        line-height: 1;
+        padding: 0.5em 0 0.75em 0;
+    }
+    
+    &__image {
+        display: block;
+        height: 27vw;
+        background-size: cover;
+        
+        @include small {
+            height: 55vw;
+        }
+    }
+    
+    &__text {
+        width: 70%;
+        
+        @include small {
+            width: 100%;
+        }
+    }
+    
+    &__category {
+        text-transform: uppercase;
+        display: block;
+        position: absolute;
+        right: 0;
+        margin-top: 20px;
+        font-family: "Founders", sans-serif;
+        border-radius: 20px;
+        border-width: 2px;
+        border-style: solid;
+        font-size: 13px;
+        letter-spacing: 2px;
+        padding: 4px 15px 5px 15px;
+        cursor: pointer;
+        
+        @include small {
+            display: inline-block;
+            position: static;
+        }
+    }
+
+}

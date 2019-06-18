@@ -1,0 +1,85 @@
+.article {
+    padding: 80px 10px 20px 10px;
+
+    &__title {
+        font-size: 30px;
+        width: 70%;
+        line-height: 1.1;
+        font-family: "Founders", sans-serif;
+        
+        @include small {
+            width: 100%;
+            font-size: 25px;
+        }
+    }
+    
+    &__details, 
+    &__credit{
+        font-family: "Founders", sans-serif;
+        width: 70%;
+        text-align: right;
+        overflow: auto;
+        padding: 10px 0 20px 0;
+
+        @include small {
+            width: 100%;    
+        }
+        
+        div {
+            text-align: left;
+            width: 30%;
+            float: right;
+            
+            @include small {
+                width: 50%;
+            }
+        }
+        
+        a:hover {
+            border-bottom: 1px solid $red;
+        }
+    }
+
+    
+    &__image {
+        width: 70%;
+        
+        @include small {
+            width: 100%;
+        }
+        
+        img {
+            width: 100%;
+        }
+    }
+    
+    &__text {
+        margin: 40px 0;
+        width: 50%;
+        line-height: 1.4;
+        
+        @include small {
+            width: 100%;
+        }
+        
+        p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+            
+            @include small {
+                font-size: 1em;
+            }
+        }
+        
+        h1,h2,h3,h4,h5,h6 {
+            font-family: "Founders", sans-serif;
+            font-size: 2em;
+            line-height: 1.1;
+            margin-bottom: 1em;
+            
+            @include small {
+                font-size: 1.5em;
+            }
+        }
+    }
+}

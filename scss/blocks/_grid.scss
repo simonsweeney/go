@@ -1,0 +1,31 @@
+.grid {
+    overflow: auto;
+    padding: 15px;
+    
+    &__title {
+        font-size: 50px;
+        margin: 60px 0 20px 0;
+        font-family: "Founders", sans-serif;
+        
+        @include small {
+            font-size: 40px;
+        }
+    }
+    
+    &__all {
+        clear: both;
+    }
+    
+    &__button {
+        display: inline-block;
+        clear: both;
+        text-transform: uppercase;
+        font-family: "Founders", sans-serif;
+        border-radius: 20px;
+        border-width: 2px;
+        border-style: solid;
+        font-size: 13px;
+        letter-spacing: 2px;
+        padding: 4px 15px 5px 15px;
+    }
+}
